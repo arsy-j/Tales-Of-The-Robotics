@@ -1,4 +1,4 @@
-Shader "Supyrb/Unlit/Texture"
+﻿Shader "Supyrb/Unlit/Texture"
 {
     Properties
     {
@@ -124,4 +124,3 @@ Shader "Supyrb/Unlit/Texture"
         }
     }
 }
- 

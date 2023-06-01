@@ -27,6 +27,9 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (DialogueManager.isActive == true) {
+            return;
+        }
         MovePlayer();
     }
 
