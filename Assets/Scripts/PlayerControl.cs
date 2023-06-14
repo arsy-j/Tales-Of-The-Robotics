@@ -23,7 +23,6 @@ public class PlayerControl : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -32,7 +31,6 @@ public class PlayerControl : MonoBehaviour
         }
         MovePlayer();
     }
-
     void Gravity()
     {
         if (controller.isGrounded)
@@ -50,22 +48,16 @@ public class PlayerControl : MonoBehaviour
     }
     public void MovePlayer()
     {
-        
          if (move.sqrMagnitude !> 0.15f)
         {
             Vector3 movement = new Vector3(move.x, 0f, move.y);
             animator.SetBool("IsWalking", true);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15f);
             controller.Move(movement * speed * Time.deltaTime);
-
-
         }
          else
         {
-            animator.SetBool("IsWalking", false);
-           
-        }
-        
-    }
-    
+            animator.SetBool("IsWalking", false);  
+        }   
+    } 
 }
